@@ -1,0 +1,22 @@
+    /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+    }
+     */
+    :root {
+    margin: 0 auto;
+    }
+    
+    #default-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+    }
+
+    .test {
+        position: fixed;
+        left:40px;
+        top:40px;
+    }

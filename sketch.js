@@ -9,19 +9,41 @@ window.addEventListener("orientationchange",onOrientationchange ,false);
       } 
    }
 
+
+var state;
+var coverPhoto;
+
+function preload() {
+  coverPhoto = loadImage('coverPhoto.jpg');
+}
 function setup() {
+
       createCanvas(375, 900);
+      var status = 0;
+      image(coverPhoto,width/2,height/2,width/2,height/2);
     }
     
 function draw() {
-      if (mouseIsPressed) {
-        fill(0);
-      } else {
-        fill(255);
-      }
-      ellipse(mouseX, mouseY, 80, 80);
+  if(state == 0)
+  {
+    if (mouseIsPressed) {
+          fill(0);
+        } else {
+          fill(255);
+        }
+        ellipse(mouseX, mouseY, 80, 80);
+        
+  }
+  else if (state == 1)
+  {
+
+  }
 }
 
+function StartButton (){
+  
+
+}
 // const s = ( p ) => {
 
 //   let x = 100; 

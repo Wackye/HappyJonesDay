@@ -7,4 +7,3 @@ function onOrientationchange() {
            //橫式
    } 
 }
-

@@ -57,17 +57,6 @@ function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
 function preload()
 {
 
-    // var p0 = loadImage('https://github.com/Wackye/HappyJonesDay/blob/gh-pages/p'+0+'.png');
-    // let p1 = loadImage('https://github.com/Wackye/HappyJonesDay/blob/gh-pages/p'+1+'.png');
-    p0 = loadImage('https://lh3.googleusercontent.com/fife/ABSRlIr6hGozYScOwRpbM5zF_a_Vcv4t1wZJZiJWXa_rdA3RyZuGUBtwRuxmjltxBoog_4EVchq5xJPYGgammgVCAzP6VRaGNPpdR0bL_KfYjReZ1EJ5-YByAZfnvedef6gNpHwj95-U-K6_LCLtfilH2xzMvR4srVMjTnBtnB12VD42hV7y5KC_imwyUw9kUB-35UgzTrd1K3ufrySLkmFjvSj9RRjVnNHXYIQqBBNnjh1SxWeFIt2aXt0S7joGzza4qOf77L4UFbWc1Ii-RVHJehyZihLCa-nxYOT5bz5b5ZdAw1vFyc3UcwTgRS0c-ThMNQCgyW5abFbJEeYw8Ge4w-JVbqPFiR0F3sv4RO7ayMkiAkd29aDex79tAKcDRGAaqNnEyL6zcAo2qMDJw1IsyJhpizpbYqt2Xs-fJBwr3786dGUraAkg_KH9zExre_4X6Kb7jyPW91W8irumR6Zv07w398bbCaUoyrusYLKpVwJRfUsYoNyc5hEK6DjEVWyFfE52o7hB2zEQfH0dYVJW5Zou88mEMU0FTPLPiQpQedaDbrX0LJIbcfBqTL3m03zZu5Lbr9MXg7stynlIF9IIE9tUxptbPyLrNQxBMsOxE2snpJsobAljXFDdnsaCV1MMyhnwk-PxoSSWMo6y1gfLTH-e9HGPpoyoVMurh9XpeFKsJLPlrv7XlGKcyESyq0hdallfLvKxqQyYxgZTF0izakyQ9tNMkgTdF2eXvA=w2560-h1378-ft');
-    // p1 = loadImage('https://i.imgur.com/3MlXP5A.png');
-    // p2 = loadImage('https://i.imgur.com/3MlXP5A.png');
-    // p3 = loadImage('https://i.imgur.com/3MlXP5A.png');
-    // p4 = loadImage('https://i.imgur.com/3MlXP5A.png');
-    // p5 = loadImage('https://i.imgur.com/3MlXP5A.png');
-    // p6 = loadImage('https://i.imgur.com/3MlXP5A.png'); 
-    // images.push(p0,p1,p2,p3,p4,p5,p6);
-    images.push(p0);
 }
 
 function setup() {

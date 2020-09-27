@@ -1,9 +1,17 @@
 var chars = [];
 let p0,p1,p2,p3,p4,p5,p6;
 var images = [];
+
+
+function onload(){
+
+    images = document.images;
+    console.log(images[0].src);
+}
+
 var data = {"number" : 7,
     "character" : ["giho", "wei", "carol","yi","wayne","horse","ming"],
-    "seconds" : [2,20,30,40,50,60],
+    "seconds" : [2,3,4,5,6,7],
     "sentence" : ["A",
                   "B",
                   "C",
@@ -22,7 +30,7 @@ class character {
         this.sentence = sentence;
         this.x = width;
         this.y = Math.random() * height * 4 / 5 + height / 5;
-        this.img = images[idx];
+        this.img = images[idx].src;
         this.count = millis();
         this.state = false;
     }
@@ -32,7 +40,7 @@ class character {
 function initChar()
 {
     
-    for(var i = 0; i < 1;i++)
+    for(var i = 0; i < 7;i++)
     {
         var c = new character(data.character[i],data.seconds[i],data.sentence[i],i);
         chars.push(c);

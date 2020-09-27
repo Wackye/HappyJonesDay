@@ -24,7 +24,10 @@
         left: 0;
 
     }
+    .noShow {
+        display: none;
 
+    }
     .test {
         position: fixed;
         left:40px;

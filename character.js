@@ -3,7 +3,7 @@ let p0,p1,p2,p3,p4,p5,p6;
 var images = [];
 var data = {"number" : 7,
     "character" : ["giho", "wei", "carol","yi","wayne","horse","ming"],
-    "seconds" : [10,20,30,40,50,60],
+    "seconds" : [2,20,30,40,50,60],
     "sentence" : ["A",
                   "B",
                   "C",
@@ -19,12 +19,12 @@ class character {
         this.name = name;
         this.sentence = sentence;
         this.sec = sec;
-        this.sentence = "";
-        this.x = width + 30;
-        this.y = Math.random() * height;
+        this.sentence = sentence;
+        this.x = width;
+        this.y = Math.random() * height * 4 / 5 + height / 5;
         this.img = images[idx];
         this.count = millis();
-        
+        this.state = false;
     }
 
 }
@@ -32,7 +32,7 @@ class character {
 function initChar()
 {
     
-    for(var i = 0; i < data.number;i++)
+    for(var i = 0; i < 1;i++)
     {
         var c = new character(data.character[i],data.seconds[i],data.sentence[i],i);
         chars.push(c);
@@ -41,12 +41,22 @@ function initChar()
 
 function cMove(c)
 {
-    if((c.count - millis()) / 1000 > c.sec)
+    if(c.state == false && (millis() - c.count) / 1000 > c.sec)
     {
+        c.state = true;
+    }
+    
+    if(c.state == true)
+    { 
         c.x-=1;
+        if(circleCollision(c,jones))
+        {
+            showCongradulation(c.img,c.sentence);
+        }
     }
 }
 
 function drawChar(c){
-    // image(c.img,c.x,c.y);
+    ellipse(c.x,c.y,240,240);
+    image(c.img,c.x,c.y,240,240);
 }

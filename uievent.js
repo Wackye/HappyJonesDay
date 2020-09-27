@@ -4,13 +4,15 @@ function showHMD()
 {
 
     // attack
-    if(pressedAttack) fill(0,255,255);
+    if(!pressedAttack) fill(0,255,255);
     else fill(192,255,255);
-    ellipse(width - 66,height - 66,100,100);
+    ellipse(width - 86,height - 86,100,100);
     // people
+    
+    fill(0,255,255)
     for(var i = 0; i < 7; i++)
     {
-        ellipse(width-100-(i+1)*60,height - 30-16,48,48);
+        ellipse(width-120-(i+1)*60,height - 50-16,48,48);
     }
 
 }

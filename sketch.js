@@ -92,6 +92,7 @@ function draw() {
     }
     else if (state == 1) {
         background(255);
+        pressedAttack = false;
         
         // background
         cloudCount+=Math.random();
@@ -127,7 +128,7 @@ function draw() {
             
             if(buttonClick(mouseX,mouseY,width-66-50,height-66-50,width-66+50,height-66+50))
             {
-                pressAttack = true;
+                pressedAttack = true;
                 console.log(pressedAttack);
                 attack(jones);
             }
@@ -136,7 +137,7 @@ function draw() {
                 clickMove(jones);
             }
         }
-        pressAttack = false;
+
 
     }
 

@@ -38,6 +38,13 @@ function collision(minX1, maxX1, minY1,maxY1, minX2, maxX2, minY2, maxY2) {
 
 }
 
+function circleCollision(a,b)
+{    
+    if(Math.pow(a.x-b.x,2) + Math.pow(a.y - b.y,2) < b.width * b.width)
+        return true;
+    return false;
+}
+
 
 function clickMove(p)
 {
@@ -84,15 +91,19 @@ function updateBullet(b)
     b.x+=3;
     for(var i = 0; i < enemies.length; i++)
     {
-        if(collision(b.x - b.width/2,b.x + b.width/2,b.y-b.height/2,b.Y+b.height/2,
-            enemies[i].x-enemies[i].width/2, enemies[i].x+enemies[i].width/2,
-            enemies[i].y-enemies[i].height/2, enemies[i].y+enemies[i].height/2))
+        
+        // if(collision(b.x - b.width/2,b.x + b.width/2,b.y-b.height/2,b.Y+b.height/2,
+        //     enemies[i].x-enemies[i].width/2, enemies[i].x+enemies[i].width/2,
+        //     enemies[i].y-enemies[i].height/2, enemies[i].y+enemies[i].height/2))
+        if(circleCollision(b,enemies[i]))
         {
-            enemies[i] = null;
+            console.log("hello");
+            // enemies[i] = null;
             enemies.splice(i,1);
-            var idx = bullets.find(b);
-            b = null;
+            var idx = bullets.findIndex(e => e == b);
+            console.log(idx);
             bullets.splice(idx,1);
+            // b = null;
         }
     }
 }

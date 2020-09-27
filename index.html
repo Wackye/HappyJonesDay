@@ -14,11 +14,15 @@
               window.scrollTo(0, 1)
             }, 0);
           };
-          if ($(document).height() > $(window).height()) {
-            $("html").addClass("noscroll");
+          
+          if (document.documentElement.scrollHeight > document.documentElement.clientHeight) {
+            var dom = document.getElementsByTagName("html");
+            dom.className += "noscroll";
           }else{
-              $("html").addClass("fixWindow"); 
-}
+            var dom = document.getElementsByTagName("html");
+            dom.className += "fixWindow"; 
+          }
+          
         </script>
         <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
         <script src="player.js"></script>

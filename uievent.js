@@ -17,7 +17,7 @@ function showHMD()
 
 
 function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
-    console.log(((mouseX > x1 && mouseX < x2) || (mouseX > x2 && mouseX < x1)));
+   
     return ((mouseX > x1 && mouseX < x2) || (mouseX > x2 && mouseX < x1)) &&
         ((mouseY > y1 && mouseY < y2) || (mouseY > y2 && mouseY < y1));
 }

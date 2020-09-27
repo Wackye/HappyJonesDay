@@ -127,8 +127,8 @@ function draw() {
             
             if(buttonClick(mouseX,mouseY,width-66-50,height-66-50,width-66+50,height-66+50))
             {
-                console.log("hello");
                 pressAttack = true;
+                console.log(pressedAttack);
                 attack(jones);
             }
             else

@@ -1,15 +1,23 @@
-    /* * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box; 
-    }
-     */
+
+
     :root {
     margin: 0 auto;
     background-color: blanchedalmond;
     display:flex;
     flex-flow:row-reverse;
     }
+
+    html.noscroll {
+        position: fixed; 
+        overflow-y: scroll;
+        width: 100%;
+    }
+    
+    html.fixWindow {
+        position: fixed;
+        width: 100%;
+    }
+
     
     #default-canvas {
         position: fixed;

@@ -54,7 +54,6 @@ function updateBackground(obj)
 }
 
 function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
-    console.log(((mouseX > x1 && mouseX < x2) || (mouseX > x2 && mouseX < x1)));
     return ((mouseX > x1 && mouseX < x2) || (mouseX > x2 && mouseX < x1)) &&
         ((mouseY > y1 && mouseY < y2) || (mouseY > y2 && mouseY < y1));
 }
@@ -114,12 +113,32 @@ function draw() {
         // enemies
         enemies.forEach(e => show(e));
         
+
+        // bullet
+        bullets.forEach(e => updateBullet(e));
+        bullets.forEach(e => drawBullet(e));
+        
+        // UI
         showHMD();
+
+
+        if(mouseIsPressed)
+        {
+            
+            if(buttonClick(mouseX,mouseY,width-66-50,height-66-50,width-66+50,height-66+50))
+            {
+                console.log("hello");
+                pressAttack = true;
+                attack(jones);
+            }
+            else
+            {
+                clickMove(jones);
+            }
+        }
+        pressAttack = false;
+
     }
 
-    if(mouseIsPressed)
-    {
-        clickMove(jones);
-    }
     
 }

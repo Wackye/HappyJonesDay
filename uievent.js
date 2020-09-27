@@ -1,8 +1,11 @@
+var pressedAttack = false;
+
 function showHMD()
 {
 
     // attack
-    fill(0,255,255);
+    if(pressedAttack) fill(0,255,255);
+    else fill(192,255,255);
     ellipse(width - 66,height - 66,100,100);
     // people
     for(var i = 0; i < 7; i++)

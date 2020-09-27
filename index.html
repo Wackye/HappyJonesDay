@@ -4,6 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="main.css" rel="stylesheet" type="text/css" />
+        <script>
+          window.onload=function(){
+            if(document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+              bodyTag = document.getElementsByTagName('body')[0];
+              bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px';
+            }
+            setTimeout(function() {
+              window.scrollTo(0, 1)
+            }, 0);
+          };
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
         <script src="player.js"></script>
         <script src="enemy.js"></script>

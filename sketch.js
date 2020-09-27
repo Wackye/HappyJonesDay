@@ -1,63 +1,77 @@
-
-window.addEventListener("orientationchange",onOrientationchange ,false);
-   function onOrientationchange() {
-      if (window.orientation === 180 || window.orientation === 0) {
-          alert("請轉橫的");
-      }
-      if (window.orientation === 90 || window.orientation === -90 ){
-              //橫式
-      } 
-   }
-
-
 var state;
 var coverPhoto;
+var timer;
+var enemies = [];
+var latestTime;
+var jones;
+// function preload() {
+//   coverPhoto = loadImage('coverPhoto.jpg');
+// }
 
-function preload() {
-  coverPhoto = loadImage('coverPhoto.jpg');
+function collision(x1, y1, x2, y2, x3, y3, x4, y4) {
 }
-function setup() {
 
-      createCanvas(375, 900);
-      var status = 0;
-      image(coverPhoto,width/2,height/2,width/2,height/2);
+function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
+    console.log(((mouseX > x1 && mouseX < x2) || (mouseX > x2 && mouseX < x1)));
+    return ((mouseX > x1 && mouseX < x2) || (mouseX > x2 && mouseX < x1)) &&
+        ((mouseY > y1 && mouseY < y2) || (mouseY > y2 && mouseY < y1));
+}
+
+function showCongradulation(){
+    noFill();
+    stroke(60);
+    strokeWeight(2);
+    rect(width/2,height/2,width/3,height/3);
+    ellipse(width/4,height/2,120,120);
+
+    fill(255,0,0);
+    rect(width/2,height * 3 / 4,120,40,10);
+}
+
+
+function setup() {
+    createCanvas(812, 375);
+    background(255);
+    state = 1;
+    timer = 100;
+    rectMode(CENTER);
+    latestTime = millis();
+    jones = new Player();
+}
+
+function draw() {
+    
+    if (state == 0) {
+
+        fill(255, 0, 0);
+        rect(width / 2, height / 2, width, height);
+
+        rect(width / 2, height /2, 120, 40, 10);
+        // console.log([mouseX,mouseY]);
+        if (buttonClick(mouseX, mouseY, width / 2 - 60, height / 2 - 20, width / 2 + 60, height / 2 + 20)) {
+            fill(255, 255, 0);
+            rect(width / 2, height / 2, 120, 40, 10);
+            if (mouseIsPressed) {
+                state = 1;
+            }
+        }
+    }
+    else if (state == 1) {
+        background(255);
+        playerMove(jones);
+        playerDraw(jones);
+        if ((millis() - latestTime) > 3000) {
+            spawnEnemy("book");
+            latestTime = millis();
+        }
+
+        enemies.forEach(e => show(e));
+        showCongradulation();
+    }
+
+    if(mouseIsPressed)
+    {
+        clickMove(jones);
     }
     
-function draw() {
-  if(state == 0)
-  {
-    if (mouseIsPressed) {
-          fill(0);
-        } else {
-          fill(255);
-        }
-        ellipse(mouseX, mouseY, 80, 80);
-        
-  }
-  else if (state == 1)
-  {
-
-  }
 }
-
-function StartButton (){
-  
-
-}
-// const s = ( p ) => {
-
-//   let x = 100; 
-//   let y = 100;
-
-//   p.setup = function() {
-//     p.createCanvas(700, 410);
-//   };
-
-//   p.draw = function() {
-//     p.background(255,123,123);
-//     p.fill(255);
-//     p.rect(x,y,50,50);
-//   };
-// };
-
-// let myp5 = new p5(s,'myContainer');

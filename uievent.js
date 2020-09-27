@@ -8,7 +8,7 @@ function showHMD()
     else fill(192,255,255);
     ellipse(width - 86,height - 86,100,100);
     // people
-    
+
     fill(0,255,255)
     for(var i = 0; i < 7; i++)
     {
@@ -24,7 +24,7 @@ function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
         ((mouseY > y1 && mouseY < y2) || (mouseY > y2 && mouseY < y1));
 }
 
-function showCongradulation(){
+function showCongradulation(c){
     noFill();
     stroke(60);
     strokeWeight(2);

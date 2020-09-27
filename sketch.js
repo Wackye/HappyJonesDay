@@ -68,7 +68,7 @@ function setup() {
     rectMode(CENTER);
     latestTime = millis();
     jones = new Player();
-
+    initChar();
     cloudTimer = 80;
     cloudCount = 0;
 }
@@ -93,7 +93,7 @@ function draw() {
     else if (state == 1) {
         background(255);
         pressedAttack = false;
-        
+
         // background
         cloudCount+=Math.random();
         if(cloudCount > cloudTimer)
@@ -111,6 +111,10 @@ function draw() {
             latestTime = millis();
         }
         
+        // character
+        chars.forEach(c => cMove(c));
+        chars.forEach(c => drawChar(c));
+
         // enemies
         enemies.forEach(e => show(e));
         

@@ -2,7 +2,7 @@
 var bullets = [];
 var attackcd = 300;
 var attackCount = 0;
-var slogan = ["OK","WellDone","糟糕","天哪","很好","那你那邊呢","是不是很簡單"];
+var slogan = ["OK","WELLDONE","糟糕","天哪","很好","那你那邊呢","是不是很簡單"];
 var sloganSize = [30,24,27,27,27,20,18];
 
 class Player {

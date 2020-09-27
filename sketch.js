@@ -5,10 +5,6 @@ var enemies = [];
 var latestTime;
 var jones;
 var clouds = [];
-// function preload() {
-//   coverPhoto = loadImage('coverPhoto.jpg');
-// }
-
 var cloudTimer;
 var cloudCount;
 
@@ -58,7 +54,20 @@ function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
         ((mouseY > y1 && mouseY < y2) || (mouseY > y2 && mouseY < y1));
 }
 
+function preload()
+{
 
+    // var p0 = loadImage('https://github.com/Wackye/HappyJonesDay/blob/gh-pages/p'+0+'.png');
+    // let p1 = loadImage('https://github.com/Wackye/HappyJonesDay/blob/gh-pages/p'+1+'.png');
+    p0 = loadImage('https://i.imgur.com/3MlXP5A.png');
+    p1 = loadImage('https://i.imgur.com/3MlXP5A.png');
+    p2 = loadImage('https://i.imgur.com/3MlXP5A.png');
+    p3 = loadImage('https://i.imgur.com/3MlXP5A.png');
+    p4 = loadImage('https://i.imgur.com/3MlXP5A.png');
+    p5 = loadImage('https://i.imgur.com/3MlXP5A.png');
+    p6 = loadImage('https://i.imgur.com/3MlXP5A.png'); 
+    images.push(p0,p1,p2,p3,p4,p5,p6);
+}
 
 function setup() {
     createCanvas(document.body.clientWidth,document.body.clientHeight);

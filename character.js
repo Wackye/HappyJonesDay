@@ -1,4 +1,6 @@
 var chars = [];
+let p0,p1,p2,p3,p4,p5,p6;
+var images = [];
 var data = {"number" : 7,
     "character" : ["giho", "wei", "carol","yi","wayne","horse","ming"],
     "seconds" : [10,20,30,40,50,60],
@@ -20,8 +22,7 @@ class character {
         this.sentence = "";
         this.x = width + 30;
         this.y = Math.random() * height;
-        console.log(String(idx+".png"));
-        this.img = loadImage(String(idx+".png"));
+        this.img = images[idx];
         this.count = millis();
         
     }
@@ -47,5 +48,5 @@ function cMove(c)
 }
 
 function drawChar(c){
-    image(c.img,c.x,c.y);
+    // image(c.img,c.x,c.y);
 }

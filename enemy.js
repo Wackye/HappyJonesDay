@@ -11,10 +11,10 @@ class Enemy {
 }
 function move(e) 
 {
-    e.y++;
-    if(e.y > height+50) 
+    e.x--;
+    if(e.x < -50) 
     {
-        enemies.shift(1);
+        enemies.shift();
         e = null;
     }
 }
@@ -27,7 +27,9 @@ function show(e)
 }
 
 function spawnEnemy(type) {
-    var e = new Enemy(Math.random()*width * 1 / 3 + width * 2/ 3, Math.random()*height);
+    var e = new Enemy(width, Math.random()*height * 5 / 6);
     enemies.push(e);
     show(e);
+}
+function collision(x1, y1, x2, y2, x3, y3, x4, y4) {
 }

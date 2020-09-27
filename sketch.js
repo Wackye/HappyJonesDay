@@ -4,11 +4,53 @@ var timer;
 var enemies = [];
 var latestTime;
 var jones;
+var clouds = [];
 // function preload() {
 //   coverPhoto = loadImage('coverPhoto.jpg');
 // }
 
-function collision(x1, y1, x2, y2, x3, y3, x4, y4) {
+var cloudTimer;
+var cloudCount;
+
+class Cloud {
+  constructor(){
+    this.x = width + 10;
+    this.y = Math.random() * height;
+    this.speed = Math.random() * 1.5;
+    this.wave = true;
+    this.waveScale = Math.random() * 10 + 5;
+    this.wavePhase = 0;
+    this.width = Math.random()*120 + 50;
+    this.height = Math.random()*60 + 25;
+  }
+
+}
+
+
+
+function createBackground()
+{
+    var c = new Cloud();
+    clouds.push(c);
+}
+
+function updateBackground(obj)
+{
+  obj.x-= Math.random() * 4;
+  if(obj.wave == true)
+  {
+    y = obj.y + cos(obj.wavePhase) * obj.waveScale;
+    if(obj.wavePhase > 3.14) obj.wavePhase = 0;
+  }
+
+  fill(192,255,255,30);
+  ellipse(obj.x,obj.y,obj.width,obj.height);
+
+  if(obj.x < -20)
+  {
+      obj = null;
+      clouds.shift();
+  }
 }
 
 function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
@@ -17,16 +59,6 @@ function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
         ((mouseY > y1 && mouseY < y2) || (mouseY > y2 && mouseY < y1));
 }
 
-function showCongradulation(){
-    noFill();
-    stroke(60);
-    strokeWeight(2);
-    rect(width/2,height/2,width/3,height/3);
-    ellipse(width/4,height/2,120,120);
-
-    fill(255,0,0);
-    rect(width/2,height * 3 / 4,120,40,10);
-}
 
 
 function setup() {
@@ -37,6 +69,9 @@ function setup() {
     rectMode(CENTER);
     latestTime = millis();
     jones = new Player();
+
+    cloudTimer = 80;
+    cloudCount = 0;
 }
 
 function draw() {
@@ -58,15 +93,28 @@ function draw() {
     }
     else if (state == 1) {
         background(255);
+        
+        // background
+        cloudCount+=Math.random();
+        if(cloudCount > cloudTimer)
+        {
+            createBackground();
+            cloudCount = 0;
+        }
+        clouds.forEach( e => updateBackground(e));
+        
+        // player
         playerMove(jones);
         playerDraw(jones);
         if ((millis() - latestTime) > 3000) {
             spawnEnemy("book");
             latestTime = millis();
         }
-
+        
+        // enemies
         enemies.forEach(e => show(e));
-        showCongradulation();
+        
+        showHMD();
     }
 
     if(mouseIsPressed)

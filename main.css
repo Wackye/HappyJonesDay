@@ -7,18 +7,17 @@
     flex-flow:row-reverse;
     }
 
-    html.noscroll {
+    noscroll {
         position: fixed; 
-        overflow-y: scroll;
-        width: 100%;
+        overflow-y: hidden;
     }
     
-    html.fixWindow {
+    fixWindow {
         position: fixed;
-        width: 100%;
+        overflow-y: visible;
     }
 
-    
+
     #default-canvas {
         position: fixed;
         top: 0;

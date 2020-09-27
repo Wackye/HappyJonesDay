@@ -61,7 +61,7 @@ function buttonClick(mouseX, mouseY, x1, y1, x2, y2) {
 
 
 function setup() {
-    createCanvas(812, 375);
+    createCanvas(document.body.clientWidth,document.body.clientHeight);
     background(255);
     state = 1;
     timer = 100;

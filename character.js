@@ -3,10 +3,11 @@ let p0,p1,p2,p3,p4,p5,p6;
 var images = [];
 
 
-function onload(){
+function onLoad(){
 
     images = document.images;
-    console.log(images[0].src);
+    console.log(images[0]);
+
 }
 
 var data = {"number" : 7,
@@ -30,7 +31,7 @@ class character {
         this.sentence = sentence;
         this.x = width;
         this.y = Math.random() * height * 4 / 5 + height / 5;
-        this.img = images[idx].src;
+        this.img = loadImage(images[idx].src);
         this.count = millis();
         this.state = false;
     }

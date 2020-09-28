@@ -1,51 +1,11 @@
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="main.css" rel="stylesheet" type="text/css" />
-        <script>
-          window.onload=function(){
-            if(document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
-              bodyTag = document.getElementsByTagName('body')[0];
-              bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px';
-            }
-            setTimeout(function() {
-              window.scrollTo(0, 1)
-            }, 0);
-          };
-          
-          if (document.documentElement.scrollHeight > document.documentElement.clientHeight) {
-            var dom = document.getElementsByTagName("html");
-            dom.className += "noscroll";
-          }else{
-            var dom = document.getElementsByTagName("html");
-            dom.className += "fixWindow"; 
-          }
-          
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
-        <script src="player.js"></script>
-        <script src="enemy.js"></script>
-        <script src="uievent.js"></script>
-        <script src="sketch.js"></script>
-        <script src="other.js"></script>
-        <script src="character.js"></script>
-    </head>
-    <body>
-      <main id="default-canvas"></main>
-          <!-- <a class="test">hello world</a> -->
-          <!-- <div class="ui"> -->
-            <!-- <button class="start-button">&#060;點擊進入照片&#062;</button> -->
-          <!-- </div> -->
-      <img class="noshow" src="https://github.com/Wackye/HappyJonesDay/blob/gh-pages/p0.png?raw=true">
-      <img class="noshow" src="https://github.com/Wackye/HappyJonesDay/blob/gh-pages/p1.png?raw=true">
-      <img class="noshow" src="https://github.com/Wackye/HappyJonesDay/blob/gh-pages/p2.png?raw=true">
-      <img class="noshow" src="https://github.com/Wackye/HappyJonesDay/blob/gh-pages/P3.png?raw=true">
-      <img class="noshow" src="https://github.com/Wackye/HappyJonesDay/blob/gh-pages/P4.png?raw=true">
-      <img class="noshow" src="https://github.com/Wackye/HappyJonesDay/blob/gh-pages/P5.png?raw=true">
-      <img class="noshow" src="https://github.com/Wackye/HappyJonesDay/blob/gh-pages/P6.png?raw=true">
-      <img class="noshow" onload="onLoad()" src="https://github.com/Wackye/HappyJonesDay/blob/gh-pages/P7.png?raw=true">
-
-    </body>
-  </html>
+<!doctype html><html><head>
+  <meta charset="UTF-8">
+  <title>Programming101 2017-1 Assignment 6</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+</head>
+<body>
+  <canvas id="pde" data-processing-sources="assign6.pde preload.pde Player.pde Soil.pde Item.pde Cabbage.pde Clock.pde Enemy.pde Soldier.pde Dinosaur.pde Robot.pde Laser.pde"></canvas>
+  <div id="console"></div>
+</body>
+</html>

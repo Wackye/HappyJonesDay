@@ -12,6 +12,6 @@ void initGame(){
 }
 
 void draw() {
-	background(255);
+	background(192,192,192);
 	image(test, 0, 0, 200, 200);
 }

@@ -23,10 +23,11 @@ class Bullet extends CollideObject {
 
   void show()
   {
-      if(used) return;
-      fill(col);
-      textSize(size);
-      text(text,x,y);
+      if(used){
+        fill(col);
+        textSize(size);
+        text(text,x,y);
+      }
   }
   
   boolean update(ArrayList<Enemy> enemies)

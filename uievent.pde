@@ -20,8 +20,8 @@ void showHMD()
     finish = true;
     for(int i = 0; i < 7; i++)
     {
-      print("hello?");
-      console.log(i);
+      print("hello");
+      println(i);
       if(chars.get(i).got == false){
          tint(0, 32);
          finish = false;

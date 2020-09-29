@@ -1,8 +1,17 @@
 
-        #pde {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width:100%;
-        }
-    
+    #pde {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width:100%;
+        background-color: black;
+    }
+    .container {
+        width:100%;
+        display:flex;
+        top:0;
+        left:0;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }

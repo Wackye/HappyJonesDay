@@ -262,20 +262,20 @@ void draw() {
      image(mails.get(showId),width/2,height/2);
      image(quit,width/2+232,height/2-151+12,62,62);
       
-    if(circleCollision2(mouseX,mouseY,width/2+232,height/2-151,76))
-    {
-      image(quit,width/2+232,height/2-151+12,76,76);
-        if(mousePressed)
-        {
-            if(finish == false)
-            {
-              gameState = 1;
-            }
-            else{
-              gameState = 4;
-            }
-        }
-    }
+      if(circleCollision2(mouseX,mouseY,width/2+232,height/2-151,76))
+      {
+        image(quit,width/2+232,height/2-151+12,76,76);
+          if(mousePressed)
+          {
+              if(finish == false)
+              {
+                gameState = 1;
+              }
+              else{
+                gameState = 4;
+              }
+          }
+      }
     }
     else if(gameState == 3)
     {

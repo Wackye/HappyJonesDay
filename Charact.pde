@@ -48,16 +48,18 @@ class Charact extends CollideObject{
             
             switch(id)
             {
-              case 2:
+              case 1:
                 sinewalk = true;
                 break;
-              case 4:
+              case 3:
                 email = true;
                 spawnTimer = 8000;
-              case 6:
+              case 5:
                 emailSpeed = 4;
                 cloudMove = 3;
                 break;
+              case 6:
+                finish = true;
             }
           }
         }

@@ -19,7 +19,7 @@ void showHMD()
     finish = true;
     for(int i = 0; i < 7; i++)
     {
-      if(chars.get(i).got){
+      if(chars.get(i).got == true){
          finish = false;
          image(people_s.get(i),width-192-i*92,height-48,72,72);
       }

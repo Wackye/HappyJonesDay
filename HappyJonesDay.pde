@@ -269,7 +269,6 @@ void draw() {
       
       if(circleCollision2(mouseX,mouseY,width/2+232,height/2-151,76))
       {
-        print(finish);
         image(quit,width/2+232,height/2-151+12,76,76);
           if(mousePressed)
           {

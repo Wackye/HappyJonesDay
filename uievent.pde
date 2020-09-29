@@ -21,8 +21,10 @@ void showHMD()
     {
       if(chars.get(i).got == false){
          finish = false;
-         image(people_s.get(i),width-192-i*92,height-48,72,72);
+         tint(128);
       }
+      image(people_s.get(i),width-192-i*92,height-48,72,72);
     }
+    noTint();
 
 }

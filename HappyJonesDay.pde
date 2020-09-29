@@ -120,6 +120,7 @@ void setup() {
 
 void initGame() {
 
+    finish = false;
     // background(255);
     gameState = 0;
     latestSpawn = 0;
@@ -166,7 +167,10 @@ void draw() {
         }
     }
     else if (gameState == 1) {
-        if(finish) gameState = 4;
+        if(finish) 
+        { 
+          gameState = 4;
+        }
         image(background,width/2,height/2,width,height);
 
         // background

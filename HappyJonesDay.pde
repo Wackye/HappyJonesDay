@@ -1,3 +1,4 @@
+// try to find the bug
 PImage coverPhoto;
 int gameState;
 

@@ -4,7 +4,7 @@
 }
     #pde {
         bottom: 0;
-        margin: 0 auto;
+        margin: auto;
     }
     .container {
         position:fixed;

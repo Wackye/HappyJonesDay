@@ -36,7 +36,7 @@ class Email extends Enemy {
       tint(255,deadTime);
       image(m1,x,y,w,h);
       noTint();
-      deadTime-=2;
+      deadTime-=3;
       speed = 2;
     }
     else{

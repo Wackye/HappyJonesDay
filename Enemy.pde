@@ -61,8 +61,8 @@ class Enemy extends CollideObject {
       tint(255,deadTime);
       image(d3,x,y,w,h);
       noTint();
-      w *= 0.92;
-      h *= 0.92;;
+      w -= 2;
+      h -= 2;;
    }
     else{
       w = 0;

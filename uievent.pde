@@ -19,11 +19,11 @@ void showHMD()
     finish = true;
     for(int i = 0; i < 7; i++)
     {
-      if(chars.get(i).got == false){
+      if(chars.get(i).got){
          finish = false;
-         tint(192, 200);
+         image(people_s.get(i),width-192-i*92,height-48,72,72);
       }
-      image(people_s.get(i),width-192-i*92,height-48,72,72);
+
       noTint();
     }
 }

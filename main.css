@@ -5,6 +5,7 @@
     #pde {
         bottom: 0;
         margin: auto;
+        pointer-events: none;
     }
     .container {
         position:fixed;
@@ -14,6 +15,7 @@
         flex-direction: row;
         align-items: flex-end;
         background-color: lightgray;
+        pointer-events: none;
     }
 
     body {

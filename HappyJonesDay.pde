@@ -293,7 +293,7 @@ void draw() {
     else if(gameState == 4)
     {
         // finish
-        image(end,width/2,height/2);
+        image(end,width/2,height/2,width,height);
 
     }
     else if(gameState == 5)

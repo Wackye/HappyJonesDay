@@ -11,7 +11,6 @@ class Charact extends CollideObject{
   PImage img;
   float count;
   int state;
-
   boolean got;
   
   Charact(String name,float sec, PImage img, int idx)

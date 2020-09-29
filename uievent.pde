@@ -20,8 +20,6 @@ void showHMD()
     finish = true;
     for(int i = 0; i < 7; i++)
     {
-      print("hello");
-      println(i);
       if(chars.get(i).got == false){
          tint(0, 32);
          finish = false;
@@ -31,14 +29,3 @@ void showHMD()
     }
     if(finish) gameState = 4;
 }
-
-//void showCongradulation(Charact c){
-//    noFill();
-//    stroke(60);
-//    strokeWeight(2);
-//    rect(width/2,height/2,width/3,height/3);
-//    ellipse(width/4,height/2,120,120);
-
-//    fill(255,0,0);
-//    rect(width/2,height * 3 / 4,120,40,10);
-//}

@@ -55,7 +55,7 @@ class Charact extends CollideObject{
                 break;
               case 4:
                 email = true;
-                spawnTimer = 5000;
+                spawnTimer = 8000;
               case 6:
                 emailSpeed = 4;
                 cloudMove = 3;

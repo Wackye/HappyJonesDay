@@ -139,8 +139,8 @@ void initGame() {
   sinewalk = false;
   emailSpeed = 4;
 
-  spawnTimer = 3000;
-  emailTimer = 3000;
+  spawnTimer = 5000;
+  emailTimer = 4000;
   cloudMove = 1;
 
 }
@@ -311,9 +311,9 @@ void draw() {
       jones.hp = 4;
       gameState = 0;
     }
-    if(bullets.size() > 30) bullets.remove(0);
-    if(enemies.size() > 30) enemies.remove(0);
-    if(emails.size() > 30) emails.remove(0);
+    if(bullets.size() > 10) bullets.remove(0);
+    if(enemies.size() > 15) enemies.remove(0);
+    if(emails.size() > 10) emails.remove(0);
 }
 
 

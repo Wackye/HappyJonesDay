@@ -16,14 +16,13 @@ void showHMD()
       image(enter,width-148/2,height-148/2+12,148,148);
     }
     // people
-    finish = true;
     for(int i = 0; i < 7; i++)
     {
-      if(chars.get(i).got == false){
-         finish = false;
-         tint(128);
+      if(chars.get(i).got == true){
+        image(people_s.get(i),width-192-i*92,height-48,72,72);
+         tint(192);
       }
-      image(people_s.get(i),width-192-i*92,height-48,72,72);
+      
     }
     noTint();
 

@@ -56,16 +56,13 @@ class Enemy extends CollideObject {
           break;
       }
     }
-    else if(deadTime > 0 && w > 1 && h > 1)
+    else if( w > 3 && h > 3)
     {
       tint(255,deadTime);
       image(d3,x,y,w,h);
       noTint();
-      deadTime-=2;
-      w *= 0.95;
-      h *= 0.95;;
-      println(w);
-      println(deadTime);
+      w *= 0.92;
+      h *= 0.92;;
    }
     else{
       w = 0;

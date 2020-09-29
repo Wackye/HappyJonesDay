@@ -268,7 +268,7 @@ void draw() {
      image(mails.get(showId),width/2,height/2);
      image(quit,width/2+232,height/2-151+12,62,62);
       
-    if(circleCollision(mouseX,mouseY,width/2+232,height/2-151,76))
+    if(circleCollision2(mouseX,mouseY,width/2+232,height/2-151,76))
     {
       image(quit,width/2+232,height/2-151+12,76,76);
         if(mousePressed)
@@ -317,7 +317,7 @@ void draw() {
 }
 
 
-boolean circleCollision(int x1, int y1, int x2, int y2, int r)
+boolean circleCollision2(int x1, int y1, int x2, int y2, int r)
 {    
     if(pow(x1-x2,2) + pow(y1-y2,2) < pow(r,2))
         return true;

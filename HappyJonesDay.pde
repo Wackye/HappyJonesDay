@@ -270,8 +270,13 @@ void draw() {
       image(quit,width/2+232,height/2-151+12,76,76);
         if(mousePressed)
         {
-            if(!finish) gameState = 1;
-            else gameState = 4;
+            if(!finish)
+            {
+              gameState = 1;
+            }
+            else{
+              gameState = 4;
+            }
         }
     }
     }
@@ -309,9 +314,9 @@ void draw() {
       jones.hp = 4;
       gameState = 0;
     }
-    if(bullets.size() > 10) bullets.remove(0);
+    if(bullets.size() > 5) bullets.remove(0);
     if(enemies.size() > 15) enemies.remove(0);
-    if(emails.size() > 10) emails.remove(0);
+    if(emails.size() > 5) emails.remove(0);
     if(clouds.size() > 10) clouds.remove(0);
 }
 

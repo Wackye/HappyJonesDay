@@ -56,7 +56,7 @@ class Enemy extends CollideObject {
           break;
       }
     }
-    else if( w > 3 && h > 3)
+    else if( w > 10 && h > 10)
     {
       tint(255,deadTime);
       image(d3,x,y,w,h);

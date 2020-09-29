@@ -31,7 +31,7 @@ class Email extends Enemy {
     {
       image(m0,x,y,w,h);
     }
-    else if(deadTime > 0)
+    else if(deadTime > 20)
     {
       tint(255,deadTime);
       image(m1,x,y,w,h);

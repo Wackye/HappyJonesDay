@@ -23,7 +23,6 @@ void showHMD()
          finish = false;
          image(people_s.get(i),width-192-i*92,height-48,72,72);
       }
-
-      noTint();
     }
+
 }

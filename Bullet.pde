@@ -43,6 +43,15 @@ class Bullet extends CollideObject {
         }
     }
     
+        for(int i = 0; i < emails.size(); i++)
+    {
+        if(circleCollision(this,emails.get(i)) && !emails.get(i).attacked && !this.used)
+        {
+            emails.get(i).attacked = true;
+            this.used = true;
+        }
+    }
+    
     return false;
   }
  

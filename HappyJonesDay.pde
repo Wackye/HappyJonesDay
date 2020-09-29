@@ -121,7 +121,7 @@ void setup() {
 void initGame() {
 
     // background(255);
-    gameState = 1;
+    gameState = 0;
     latestSpawn = 0;
     latestEmail = 0;
 

@@ -10,7 +10,7 @@ float cloudTimer;
 float cloudCount;
 ArrayList<PImage> people;
 ArrayList<PImage> mails;
-PImage[] people_s; 
+ArrayList<PImage> people_s;
 
 PFont font;
 PImage teacher,quit,hp,arrow;
@@ -56,12 +56,11 @@ void setup() {
 
   // size(document.body.clientWidth,document.body.clientHeight,P2D);
 	size(800, 350, P2D);
-  people_s = new PImage[7];
-  for(int i = 0; i < 7; i++)
-  {
-    PImage pi = new PImage();
-    pi = loadImage("img/head_s/p"+i+"_s.png");
-    people_s[i] = pi;
+  people_s = new ArrayList<PImage>();
+  for(int i = 0 ; i < 7; i++)  {
+    PImage pi_s = new PImage();
+    pi_s = loadImage("img/head_s/p"+i+"_s.png");
+    people_s.add(pi_s);
   }
   
   people = new ArrayList<PImage>();
@@ -69,7 +68,7 @@ void setup() {
   {
     PImage pi = new PImage();
     pi = loadImage("img/head/P"+i+".png");
-    people.add(pi); 
+    people.add(pi);
   }
   mails = new ArrayList<PImage>();
   for(int i = 0 ; i < 7; i++)
@@ -267,13 +266,15 @@ void draw() {
      noTint();
      image(mails.get(showId),width/2,height/2);
      image(quit,width/2+232,height/2-151+12,62,62);
-      if(mousePressed)
-      {
-        if(circleCollision(mouseX,mouseY,width/2+240,height/2-151,62))
+      
+    if(circleCollision(mouseX,mouseY,width/2+232,height/2-151,76))
+    {
+      image(quit,width/2+232,height/2-151+12,76,76);
+        if(mousePressed)
         {
-          gameState = 1;
+            gameState = 1;
         }
-      }
+    }
     }
     else if(gameState == 3)
     {

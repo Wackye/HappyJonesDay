@@ -1,5 +1,7 @@
 ArrayList<Charact> chars;
 int showId = 0;
+String[] charName = {"giho", "wei", "carol","yi","wayne","horse","ming"};
+int[] seconds = {15,25,35,50,60,75,90};
 
 class Charact extends CollideObject{
     
@@ -72,13 +74,9 @@ class Charact extends CollideObject{
 
 void initChar()
 {
-  int charNumber = 7;
-  String[] charName = {"giho", "wei", "carol","yi","wayne","horse","ming"};
-  int[] seconds = {10,20,30,45,60,75,90};
-
     for(int i = 0; i < 7; i++)
     {
-        Charact c = new Charact(charName[i],seconds[i],people_s[i],i);
+        Charact c = new Charact(charName[i],seconds[i],people_s.get(i),i);
         chars.add(c);
     }
 }

@@ -20,11 +20,13 @@ void showHMD()
     finish = true;
     for(int i = 0; i < 7; i++)
     {
+      print("hello?");
+      console.log(i);
       if(chars.get(i).got == false){
          tint(0, 32);
          finish = false;
       }
-      image(people_s[i],width-192-i*92,height-12-36,72,72);
+      image(people_s.get(i),width-192-i*92,height-12-36,72,72);
       noTint();
     }
     if(finish) gameState = 4;

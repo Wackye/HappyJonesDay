@@ -56,7 +56,7 @@ public class CollideObject
 void setup() {
 
   // size(document.body.clientWidth,document.body.clientHeight,P2D);
-	size(canvasWidth, canvasHeight, P2D);
+	size(800, 350, P2D);
   people_s = new ArrayList<PImage>();
   for(int i = 0 ; i < 7; i++)  {
     PImage pi_s = new PImage();

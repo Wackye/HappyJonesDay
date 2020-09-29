@@ -1,4 +1,7 @@
-
+@viewport {
+    width: device-width;
+    initial-scale: 1.0
+}
     #pde {
         bottom: 0;
         margin: 0 auto;

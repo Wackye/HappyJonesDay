@@ -16,7 +16,6 @@ void showHMD()
       image(enter,width-148/2,height-148/2+12,148,148);
     }
     // people
-
     finish = true;
     for(int i = 0; i < 7; i++)
     {

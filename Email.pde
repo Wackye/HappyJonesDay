@@ -5,8 +5,8 @@ class Email extends Enemy {
   Email(int locx,int locy, boolean sine)
   {
     super(locx,locy,0,sine);
-    w = 60;
-    h = 60;
+    w = 65;
+    h = 65;
     speed = random(emailSpeed)+2;
   }
   
@@ -31,13 +31,13 @@ class Email extends Enemy {
     {
       image(m0,x,y,w,h);
     }
-    else if(deadTime > 0 || w > 0 || h > 0)
+    else if(deadTime > 0)
     {
       tint(255,deadTime);
       image(m1,x,y,w,h);
       noTint();
-      deadTime-=1;
-
+      deadTime-=2;
+      speed = 2;
     }
     else{
       w = 0;

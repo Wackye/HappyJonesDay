@@ -45,8 +45,6 @@ class Charact extends CollideObject{
             gameState = 2;
             showId = id;
             got = true;
-            w=0;
-            h=0;
             
             switch(id)
             {
@@ -67,7 +65,9 @@ class Charact extends CollideObject{
 
   void show()
   {
-      if(state == 1) image(img,x,y,w,h); 
+      if(state == 1) {
+        image(img,x,y,w,h); 
+      }
   }
 }
 

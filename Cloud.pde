@@ -14,7 +14,7 @@ public class Cloud extends CollideObject {
     this.walkY = y;
     this.speed = random(cloudMove/2)+cloudMove;
     this.wave = true;
-    this.waveScale = random(20) + 10;
+    this.waveScale = random(20);
     this.wavePhase = 0;
     this.w = 106+random(20);
     this.h = 70+random(10);;
@@ -26,7 +26,7 @@ public class Cloud extends CollideObject {
     x = x - speed;
     if(this.wave == true)
     {
-      waveScale += random(0.3);
+      wavePhase += random(0.02);
       y = walkY + cos(this.wavePhase)* waveScale;
       if(wavePhase > 6.28) wavePhase = 0;
     }

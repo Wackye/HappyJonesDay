@@ -33,6 +33,7 @@ class Charact extends CollideObject{
         if(state == 0 && (millis() - count) / 1000 > sec)
         {
           state = 1;
+          // start move
         }
         
         if(state == 1 && !got)
@@ -40,13 +41,12 @@ class Charact extends CollideObject{
           x--;
           if(circleCollision(jones,this))
           {
+            state = 2;
             gameState = 2;
             showId = id;
             got = true;
             w=0;
             h=0;
-            x=0;
-            y=0;
             
             switch(id)
             {
@@ -67,7 +67,7 @@ class Charact extends CollideObject{
 
   void show()
   {
-      image(img,x,y,w,h); 
+      if(state == 1) image(img,x,y,w,h); 
   }
 }
 

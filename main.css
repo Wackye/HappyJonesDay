@@ -12,3 +12,7 @@
         align-items: flex-end;
         background-color: lightgray;
     }
+
+    body {
+        overflow: hidden;
+    }

@@ -259,9 +259,6 @@ void draw() {
         
         // bullet
         for(int i=0;i<bullets.size();i++)   bullets.get(i).show(); 
-        
-        // enemy
-        for(Enemy e : enemies) e.show();
  
 
      noTint();
@@ -273,7 +270,8 @@ void draw() {
       image(quit,width/2+232,height/2-151+12,76,76);
         if(mousePressed)
         {
-            gameState = 1;
+            if(!finish) gameState = 1;
+            else gameState = 4;
         }
     }
     }

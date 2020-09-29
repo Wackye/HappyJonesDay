@@ -1,5 +1,5 @@
-int gameState;
 PImage coverPhoto;
+int gameState;
 
 ArrayList<Enemy> enemies;
 ArrayList<Email> emails;

@@ -314,6 +314,7 @@ void draw() {
     if(bullets.size() > 10) bullets.remove(0);
     if(enemies.size() > 15) enemies.remove(0);
     if(emails.size() > 10) emails.remove(0);
+    if(clouds.size() > 10) clouds.remove(0);
 }
 
 

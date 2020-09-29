@@ -1,6 +1,7 @@
 
     #pde {
         bottom: 0;
+        margin: 0 auto;
     }
     .container {
         position:fixed;
@@ -9,6 +10,5 @@
         display:flex;
         flex-direction: row;
         align-items: flex-end;
-        margin:auto;
         background-color: lightgray;
     }

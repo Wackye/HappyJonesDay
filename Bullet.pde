@@ -3,7 +3,7 @@ public String[] slogan = {"OK","WELLDONE","天哪","很好","那你那邊呢","�
 public int[] sloganSize = {30,24,27,27,27,20,18};
 class Bullet extends CollideObject {
 
-  String text;
+  String content;
   int size;
   color col;
   boolean used; 
@@ -14,7 +14,7 @@ class Bullet extends CollideObject {
       this.h = 30;
       
       int id = floor(random(6));
-      this.text = slogan[id];
+      this.content = slogan[id];
       this.size = sloganSize[id];
       this.col = color(random(128)+64,random(128)+64,random(128)+64);
       used = false;
@@ -23,10 +23,10 @@ class Bullet extends CollideObject {
 
   void show()
   {
-      if(used){
+      if(!used){
         fill(col);
         textSize(size);
-        text(text,x,y);
+        text(this.content,x,y);
       }
   }
   

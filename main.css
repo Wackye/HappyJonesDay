@@ -2,12 +2,11 @@
     #pde {
         position: fixed;
         bottom: 0;
-        background-color: black;
     }
     .container {
         max-width:812px;
         width:100%;
-        height:auto;
+        height:100%;
         display:flex;
         top:0;
         left:0;
@@ -15,4 +14,5 @@
         align-items: flex-end;
         justify-content: center;
         margin:auto;
+        background-color: gray;
     }

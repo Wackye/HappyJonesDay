@@ -9,7 +9,6 @@
         display:flex;
         flex-direction: row;
         align-items: flex-end;
-        justify-content: center;
         margin:auto;
-        background-color: gray;
+        background-color: lightgray;
     }

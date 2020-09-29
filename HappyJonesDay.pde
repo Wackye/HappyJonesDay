@@ -120,7 +120,7 @@ void setup() {
 
 void initGame() {
 
-    background(255);
+    // background(255);
     gameState = 1;
     latestSpawn = 0;
     latestEmail = 0;

@@ -1,5 +1,6 @@
 /* @pjs preload=
-"img/P0.png,
+"Bullet.pde,
+ img/P0.png,
  img/P1.png,
  img/P2.png,
  img/P3.png,

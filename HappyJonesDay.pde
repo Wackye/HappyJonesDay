@@ -249,17 +249,14 @@ void draw() {
     }
     else if(gameState == 2)
     {
-      tint(128,64);
+      tint(128);
       image(background,width/2,height/2);
      
       // background
       for(Cloud c : clouds) c.show();
       // player
-      jones.show();
         
         // bullet
-        for(int i=0;i<bullets.size();i++)   bullets.get(i).show(); 
- 
 
      noTint();
      image(mails.get(showId),width/2,height/2);

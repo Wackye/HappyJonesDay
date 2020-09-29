@@ -267,7 +267,7 @@ void draw() {
       image(quit,width/2+232,height/2-151+12,76,76);
         if(mousePressed)
         {
-            if(!finish)
+            if(finish == false)
             {
               gameState = 1;
             }
